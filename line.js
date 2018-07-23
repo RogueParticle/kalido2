@@ -1,6 +1,7 @@
-function Line(x1,y1,x2,y2, sc) {
+function Line(x1,y1,x2,y2, sc, sw) {
 
   this.strokeColor = sc;
+  this.strokeWidth = sw;
 
   //invert by aspect ratio
   this.ix1 = y1 * aspect;
@@ -59,6 +60,7 @@ function Line(x1,y1,x2,y2, sc) {
 
   this.show = function() {
     stroke(this.strokeColor);
+    strokeWeight(this.strokeWidth);
     line(this.o1x1, this.o1y1, this.o1x2, this.o1y2);
     line(this.o5x1, this.o5y1, this.o5x2, this.o5y2);
 
